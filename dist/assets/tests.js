@@ -4423,7 +4423,7 @@ define('todomvc/tests/lint/app.lint-test', [], function () {
 
   QUnit.test('components/todo-item.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/todo-item.js should pass ESLint\n\n1:15 - \'get\' is defined but never used. (no-unused-vars)\n17:8 - Redundant double negation. (no-extra-boolean-cast)');
+    assert.ok(false, 'components/todo-item.js should pass ESLint\n\n1:15 - \'get\' is defined but never used. (no-unused-vars)');
   });
 
   QUnit.test('components/todo-list.js', function (assert) {

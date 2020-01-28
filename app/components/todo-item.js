@@ -14,10 +14,10 @@ export default Component.extend({
 	costPerKg: computed('todo.title', function() {
 		const regexForCostString = (/^(\d*\.)?\d+g\/(\d*\.)?\d+$/g);
 		const getRegexMatch = this.get('todo.title').match(regexForCostString);
-		if (!!getRegexMatch) {
+		if (getRegexMatch) {
 			const extractedData = getRegexMatch[0].split('g/');
-			const costPer100g = (extractedData[1]/extractedData[0])*100;
-			return `₹ ${costPer100g}/100g`;
+			const costPer100g = parseInt((extractedData[1]/extractedData[0])*100);
+			return `₹ ${costPer100g.toFixed(2)}/100g`;
 		}
 		return;
 	}),
