@@ -1,0 +1,30 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>Thrifty Todo</h1>
+    <h1>Thrifty Todo</h1>
+    <input
+      class="new-todo"
+      onkeydown={{action "createTodo"}}
+      placeholder="eg. 480g@120"
+      autofocus
+    >
+  </header>
+  {{outlet}}
+  {{#if (gt model.length 0)}}
+    <footer class="footer">
+      <span class="todo-count"><strong>{{remaining.length}}</strong> {{pluralize "item" remaining.length}} left</span>
+      <ul class="filters">
+        <li>{{#link-to "index" activeClass="selected"}}All{{/link-to}}</li>
+        <li>{{#link-to "active" activeClass="selected"}}Active{{/link-to}}</li>
+        <li>{{#link-to "completed" activeClass="selected"}}Completed{{/link-to}}</li>
+      </ul>
+      {{#if completed.length}}
+        <button class="clear-completed" onclick={{action "clearCompleted"}}>Clear completed</button>
+      {{/if}}
+    </footer>
+  {{/if}}
+</section>
+<footer class="info">
+  <p>Double-click to edit a todo</p>
+  <p></p>
+</footer>

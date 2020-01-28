@@ -1,0 +1,23 @@
+<div class="view">
+  <input
+    class="toggle"
+    type="checkbox"
+    checked={{todo.completed}}
+    onchange={{action "toggleCompleted"}}
+  >
+  <label ondblclick={{action "startEditing"}}>
+    {{todo.title}}
+    {{#if costPerKg}}
+      <span class="cost-label">{{costPerKg}}</span>
+    {{/if}}
+  </label>
+  
+  <button class="destroy" onclick={{action "removeTodo"}}></button>
+</div>
+<input
+  class="edit"
+  value={{todo.title}}
+  onblur={{action "doneEditing" value="target.value"}}
+  onkeydown={{action "handleKeydown"}}
+  autofocus
+>

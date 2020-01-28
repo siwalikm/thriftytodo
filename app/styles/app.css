@@ -1,0 +1,21 @@
+.cost-label {
+  float: right;
+  margin-right: 38px;
+  font-size: 17px;
+  background: #ffeb3b;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.todoapp h1 {
+  position: absolute;
+  top: -145px;
+  width: 100%;
+  font-size: 80px;
+  font-weight: 100;
+  text-align: center;
+  color: #4d4d4d;
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+}
